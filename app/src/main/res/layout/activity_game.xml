@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+    <TextView
+        android:id="@+id/lblPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="Points:"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lblPlayerOnePoints"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/playersPoints"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/lblPlayerTwoPoints"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lblPlayerTwoPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/playersPoints"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/lblPlayerOnePoints" />
+
+    <Button
+        android:id="@+id/btnNewGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:text="New Game"
+        app:layout_constraintBottom_toTopOf="@+id/lblPoints"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/playerOneX"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="7dp"
+        app:layout_constraintBottom_toBottomOf="@+id/lblPlayerOnePoints"
+        app:layout_constraintEnd_toStartOf="@+id/lblPlayerOnePoints"
+        app:srcCompat="@drawable/x" />
+
+    <ImageView
+        android:id="@+id/playerTwoO"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="7dp"
+        app:layout_constraintBottom_toBottomOf="@+id/lblPlayerTwoPoints"
+        app:layout_constraintEnd_toStartOf="@+id/lblPlayerTwoPoints"
+        app:srcCompat="@drawable/o" />
+
+    <ImageView
+        android:id="@+id/base"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:background="@drawable/base"
+        app:layout_constraintBottom_toTopOf="@+id/btnNewGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/b1"
+        android:layout_width="107dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toStartOf="@+id/base"
+        app:layout_constraintTop_toTopOf="@+id/base" />
+
+    <ImageView
+        android:id="@+id/b2"
+        android:layout_width="107dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="2dp"
+        app:layout_constraintEnd_toStartOf="@+id/b3"
+        app:layout_constraintStart_toEndOf="@+id/b1"
+        app:layout_constraintTop_toTopOf="@+id/base" />
+
+    <ImageView
+        android:id="@+id/b3"
+        android:layout_width="107dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/base"
+        app:layout_constraintTop_toTopOf="@+id/base" />
+
+    <ImageView
+        android:id="@+id/b4"
+        android:layout_width="107dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@+id/b1"
+        app:layout_constraintTop_toBottomOf="@+id/b1" />
+
+    <ImageView
+        android:id="@+id/b5"
+        android:layout_width="107dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="2dp"
+        app:layout_constraintEnd_toStartOf="@+id/b6"
+        app:layout_constraintStart_toEndOf="@+id/b4"
+        app:layout_constraintTop_toBottomOf="@+id/b2" />
+
+
+    <ImageView
+        android:id="@+id/b6"
+        android:layout_width="107dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/base"
+        app:layout_constraintTop_toBottomOf="@+id/b3" />
+
+    <ImageView
+        android:id="@+id/b7"
+        android:layout_width="107dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/b4"
+        app:layout_constraintTop_toBottomOf="@+id/b4" />
+
+    <ImageView
+        android:id="@+id/b8"
+        android:layout_width="107dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="2dp"
+        app:layout_constraintEnd_toStartOf="@+id/b9"
+        app:layout_constraintStart_toEndOf="@+id/b7"
+        app:layout_constraintTop_toBottomOf="@+id/b5" />
+
+    <ImageView
+        android:id="@+id/b9"
+        android:layout_width="107dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/base"
+        app:layout_constraintTop_toBottomOf="@+id/b6" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
