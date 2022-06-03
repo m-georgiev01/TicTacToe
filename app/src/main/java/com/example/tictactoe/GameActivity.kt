@@ -195,12 +195,10 @@ class GameActivity : AppCompatActivity() {
             val msg = AlertDialog.Builder(this)
             msg.setTitle("It's a draw!")
             msg.setMessage("Better luck next time!")
-            msg.setPositiveButton("Next game"){_,_ ->
-                clearBoxes()
-                currentPlayer = 1
-            }
+            msg.setPositiveButton("Next game"){_,_ -> }
             msg.show()
-
+            clearBoxes()
+            currentPlayer = 1
         }
     }
 }
